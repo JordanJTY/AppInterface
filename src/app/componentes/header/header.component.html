@@ -1,0 +1,12 @@
+<div class="header">
+    <img href="" src="../../../assets/images/logoCodetech.png" class="logo" />
+    <div class="header-right">
+        <span id="acceso" *ngIf="miToken == 0" routerLink="/login">
+            <img src="../../../assets/images/withinLogin.png">
+        </span>
+        <span  *ngIf="miToken != 0">
+            <img id="logout" (click)="logout()" src="https://cdn-icons-png.flaticon.com/512/1243/1243950.png">
+            <img id="perfil" src="../../../assets/images/avatar.png">
+        </span>
+    </div>
+</div>

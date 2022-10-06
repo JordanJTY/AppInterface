@@ -1,0 +1,25 @@
+<div class="header">
+  <mat-grid-list cols="4">
+    <mat-grid-tile>
+      <a class="active" href="#home">Home</a>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <a href="/contact">Contact</a>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <a routerLink="/us">About</a>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <a routerLink="/us">Carrito</a>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+<!-- <ul id="menu">
+    <li><span> </span></li>
+    <li routerLink="/listado"><span>Blog</span></li>
+    <li routerLink="/nosotros"><span>Acerca de</span></li>
+    <li id="acceso" *ngIf="miToken == 0" class="acceso" routerLink="/login"><span>Acceso</span></li>
+    <li id="acceso" *ngIf="miToken != 0" class="acceso" (click)="logout()"><span><strong>Usuario:</strong>
+            {{ nombreUsuario }}</span></li>
+</ul> -->

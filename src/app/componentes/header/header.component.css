@@ -1,0 +1,32 @@
+/* Style the header with a grey background and some padding */
+.logo {
+    margin-left: .5em;
+    width: 3em;
+    height: 3em;
+}
+
+#acceso img {
+    width: 3em;
+    height: 3em;
+}
+
+#perfil {
+    width: 3em;
+    height: 3em;
+}
+
+#logout {
+    width: 2em;
+    height: 2em;
+}
+
+.header {
+    overflow: hidden;
+    background-color: #D7BEA8;
+    padding: 20px 10px;
+}
+
+/* Float the link section to the right */
+.header-right {
+    float: right;
+}

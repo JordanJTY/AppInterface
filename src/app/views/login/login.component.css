@@ -42,3 +42,16 @@ mat-card {
     padding-right: 60px;
     text-decoration: none;
 }
+
+#loginImage {
+    border-radius: 15%;
+
+}
+
+#loginImage img {
+    border-color: black;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 3.5em;
+    height: 3.5em;
+}

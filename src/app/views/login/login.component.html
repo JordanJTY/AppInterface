@@ -22,11 +22,13 @@
 
 <mat-card>
     <mat-card-content>
+        <h3>¡Contáctanos!</h3>
         <form (ngSubmit)="onLogin()" name="loginForm" [formGroup]="loginForm">
             <div class="emailInput">
                 <mat-form-field class="full-width" appearance="outline">
                     <mat-label>Email</mat-label>
-                    <input formControlName="email" matInput placeholder="Enter email address" required />
+                    <input formControlName="email" [(ngModel)]="user.name" name="name" matInput
+                        placeholder="Enter email address" required />
                     <mat-error *ngIf="!loginForm.controls['email'].valid">
                         Email is required
                     </mat-error>
@@ -39,11 +41,12 @@
                 </span>
                 <mat-form-field class="full-width" appearance="outline">
                     <mat-label>Password</mat-label>
-                    <input formControlName="password" matInput [type]=" hide ? 'password' : 'text'" required />
+                    <input formControlName="password" [(ngModel)]="user.password" name="password" matInput
+                        [type]=" hide ? 'text' : 'password'" required />
                     <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide Password'"
                         [attr.aria-pressed]="hide">
                         <mat-icon>
-                            {{hide ? 'visibility_off' : 'visibility'}}
+                            {{hide ? 'visibility' : 'visibility_off' }}
                         </mat-icon>
                     </button>
                     <mat-error *ngIf="!loginForm.controls['password'].valid">
@@ -51,11 +54,13 @@
                     </mat-error>
                 </mat-form-field>
             </div>
-            <button mat-flat-button color="primary">Login</button>
+            <button id="loginImage" mat-flat-button>
+                <img  src="../../../assets/images/flecha.png"/>
+            </button>
         </form>
 
         <div class="button-row">
-            <p>Create New Account</p>
+            <p>¿No tienes cuenta?</p>
         </div>
     </mat-card-content>
 </mat-card>

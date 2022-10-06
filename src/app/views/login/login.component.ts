@@ -11,9 +11,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
+  public user: User;
   hide: boolean = false;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private loginService: LoginService, private router: Router) {
+    this.user = new User();
   }
 
   ngOnInit() {
@@ -24,36 +26,37 @@ export class LoginComponent implements OnInit {
     password: ['', [Validators.required, Validators.minLength(6)]]
   })
 
+  public submit(): void {
+    this.loginService.login(this.user).subscribe(
+      (data: number) => {
+        localStorage.setItem('userName', this.user.name);
+        localStorage.setItem('personalToken', `${data}`);
+
+        this.router.navigate(['/list']).then(() => { window.location.reload(); });
+      },
+      (error: Error) => {
+        console.error("Error al realizar el acceso- login");
+      }
+    )
+  }
 
   onLogin() {
     if (!this.loginForm.valid) {
       return;
+    } else {
+      this.loginService.login(this.user).subscribe(
+        (data: number) => {
+          localStorage.setItem('userName', this.user.name);
+          localStorage.setItem('personalToken', `${data}`);
+
+          this.router.navigate(['/list']).then(() => { window.location.reload(); });
+        },
+        (error: Error) => {
+          console.error("Error al realizar el acceso- login");
+        }
+      )
     }
     console.log(this.loginForm.value);
   }
 
 }
-
-//   public user: User;
-
-//   constructor(private loginService: LoginService, private router: Router) {
-//     this.user = new User();
-//   }
-
-//   ngOnInit(): void {
-//   }
-//   public submit(): void {
-//     this.loginService.login(this.user).subscribe(
-//       (data: number) => {
-//         localStorage.setItem('userName', this.user.name);
-//         localStorage.setItem('personalToken', `${data}`);
-
-//         this.router.navigate(['/list']).then(() => { window.location.reload(); });
-//       },
-//       (error: Error) => {
-//         console.error("Error al realizar el acceso- login");
-//       }
-//     )
-//   }
-
-// }

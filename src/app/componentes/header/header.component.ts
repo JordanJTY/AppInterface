@@ -27,6 +27,14 @@ export class HeaderComponent implements OnInit {
   }
   // fin de pregunta estas seguro?
 
+  public showLogout(): void{
+    if(document.getElementById('logout')?.getAttribute('style') == 'display: none;'){
+      document.getElementById('logout')?.setAttribute('style', 'display: inline;');
+    } else {
+      document.getElementById('logout')?.setAttribute('style', 'display: none;');
+    }
+  }
+
   public logout(): void {
     if (localStorage.getItem('personalToken')) {
       Swal.fire({

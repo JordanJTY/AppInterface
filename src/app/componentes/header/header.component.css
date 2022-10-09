@@ -18,6 +18,8 @@
 #logout {
     width: 2em;
     height: 2em;
+    margin-right: .5em;
+    margin-bottom: .35em;
 }
 
 .header {

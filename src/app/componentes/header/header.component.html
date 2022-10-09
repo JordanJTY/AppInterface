@@ -5,8 +5,8 @@
             <img src="../../../assets/images/withinLogin.png">
         </span>
         <span  *ngIf="miToken != 0">
-            <img id="logout" (click)="logout()" src="https://cdn-icons-png.flaticon.com/512/1243/1243950.png">
-            <img id="perfil" src="../../../assets/images/avatar.png">
+            <img id="logout" style="display: none;" (click)="logout()" src="https://cdn-icons-png.flaticon.com/512/1243/1243950.png">
+            <img id="perfil" (click)="showLogout()" src="../../../assets/images/avatar.png">
         </span>
     </div>
 </div>

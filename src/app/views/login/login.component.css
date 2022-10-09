@@ -1,9 +1,14 @@
 mat-card {
     max-width: 600px;
-    margin: 2em auto;
+    margin: 0.5em auto;
     text-align: center;
     max-height: 600px;
     background-color: transparent;
+}
+
+#inputField {
+    border-radius: 25px;
+    background-color: aqua;
 }
 
 .header {
@@ -45,13 +50,18 @@ mat-card {
 
 #loginImage {
     border-radius: 15%;
-
+    background-color: #D7BEA8;
+    border: 2px solid black;
 }
 
-#loginImage img {
-    border-color: black;
+#logo {
+    width: 17em;
+    height: 17em;
+}
+
+#loginImage img { 
     margin-top: 1em;
     margin-bottom: 1em;
-    width: 3.5em;
-    height: 3.5em;
+    width: 2.5em;
+    height: 2.5em;
 }

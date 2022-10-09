@@ -13,8 +13,8 @@ export class EntreeComponent implements OnInit {
 
   constructor() {
     this.entree = {
-      title: '',
-      body: ''
+      name: '',
+      description: ''
     }
   }
 

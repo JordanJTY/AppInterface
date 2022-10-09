@@ -1,29 +1,67 @@
 <div class="content">
   <div class="contact-wrapper animated bounceInUp">
-    <div class="contact-form">
+    <h3>¡Contáctanos!</h3>
+    <div class="form-container">
+      <form [formGroup]="contactForm" (ngSubmit)="submit()">
+        <input type="text" formControlName="name" placeholder="Nombre">
+        <div class="alert-danger" *ngIf="name?.invalid && (name?.dirty || name?.touched)">
+          <div class="container-error-message" *ngIf="name?.errors?.['required']">
+            Nombre requerido.
+          </div>
+          <div class="container-error-message" *ngIf="name?.errors?.['minlength']">
+            Nombre debe ser más largo que 5 letras.
+          </div>
+        </div>
+        <input type="text" formControlName="email" placeholder="Email">
+        <div class="alert-danger" *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+          <div class="container-error-message" *ngIf="email?.errors?.['required']">
+            Email requerido.
+          </div>
+          <div class="container-error-message" *ngIf="email?.errors?.['minlength']">
+            Email debe ser más largo que 5 letras.
+          </div>
+          <div class="container-error-message"
+            *ngIf="(email?.dirty || email?.touched) && email?.invalid && email?.errors?.['pattern']">
+            Debe ser un correo electrónico.
+          </div>
+        </div>
+        <textarea formControlName="message" placeholder="Mensaje" rows="5"></textarea>
+        <div class="alert-danger" *ngIf="message?.invalid && (message?.dirty || message?.touched)">
+          <div class="container-error-message" *ngIf="message?.errors?.['required']">
+            Mensaje requerido.
+          </div>
+          <div class="container-error-message" *ngIf="message?.errors?.['minlength']">
+            El mensaje debe ser mayor que 10 letras.
+          </div>
+        </div>
+        <button type="submit" class="btn-send" [disabled]="!contactForm.valid">Send</button>
+      </form>
+    </div>
+    <!-- <div class="contact-form">
       <h3>Contact us</h3>
-      <form action="">
+      <form [formGroup]="contactForm" (ngSubmit)="submit()">
         <p class="block">
           <label>Nombre:</label>
-          <input type="text" name="fullname">
+          <input type="text" formControlName="name">
+          
         </p>
         <p class="block">
           <label>Email:</label>
-          <input type="email" name="email">
+          <input type="email" formControlName="email">
         </p>
         <p class="block">
           <label>Mensaje:</label>
-          <textarea name="message" rows="4"></textarea>
+          <textarea formControlName="message" rows="4"></textarea>
         </p>
         <p class="block">
-          <button (click)="confirmSend()">
+          <button >
             Enviar
           </button>
         </p>
       </form>
-    </div>
+    </div> -->
     <div class="contact-info">
-      <h4>More Info</h4>
+      <h4>Más información</h4>
       <ul>
         <li><i class="fas fa-map-marker-alt"></i> Baker Street</li>
         <li><i class="fas fa-phone"></i> (111) 111 111 111</li>

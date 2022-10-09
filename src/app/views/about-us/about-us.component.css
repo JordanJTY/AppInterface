@@ -1,0 +1,36 @@
+#contenedor {
+    text-align: justify;
+    margin: 2em;
+    border-radius: 25px;
+    background-color: #00c8ffaa;
+}
+
+#contenedor p {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin: 1em;
+}
+
+#buttons button {
+    margin: 2em;
+    display: flex;
+    width: auto;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: #00c8ffaa;
+}
+
+#buttons button img {
+    margin-top: .7em;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+#versionApp{
+    margin-left: 80%;
+    margin-top: 35%;
+    bottom: 0;
+}

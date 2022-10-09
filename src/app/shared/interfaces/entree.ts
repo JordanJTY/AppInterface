@@ -1,4 +1,4 @@
 export interface Entree {
-    title: string;
-    body: string;
+    name: string;
+    description: string;
 }

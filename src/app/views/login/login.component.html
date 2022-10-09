@@ -22,7 +22,7 @@
 
 <mat-card>
     <mat-card-content>
-        <h3>¡Contáctanos!</h3>
+        <img id="logo" src="../../../assets/images/logoCodetechComplete.png"/>
         <form (ngSubmit)="onLogin()" name="loginForm" [formGroup]="loginForm">
             <div class="emailInput">
                 <mat-form-field class="full-width" appearance="outline">
@@ -41,7 +41,7 @@
                 </span>
                 <mat-form-field class="full-width" appearance="outline">
                     <mat-label>Password</mat-label>
-                    <input formControlName="password" [(ngModel)]="user.password" name="password" matInput
+                    <input  formControlName="password" [(ngModel)]="user.password" name="password" matInput
                         [type]=" hide ? 'text' : 'password'" required />
                     <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide Password'"
                         [attr.aria-pressed]="hide">

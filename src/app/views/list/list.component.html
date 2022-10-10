@@ -1,4 +1,7 @@
 <div id="list">
+    <div>
+        <input type="text" [(ngModel)]="search" placeholder="Buscar">
+    </div>
     <div class="slideshow-container">
         <div class="mySlides fade">
             <div class="numbertext">1 / 3</div>
@@ -29,7 +32,7 @@
     </div>
 
     <div id="entree">
-        <app-entree *ngFor="let entree of entryList" [entree]="entree" (click)="showTitle(entree.title)">
+        <app-entree *ngFor="let entree of entryList | filter: search" [entree]="entree" (click)="showTitle(entree.title)">
         </app-entree>
     </div>
 </div>

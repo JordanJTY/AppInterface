@@ -10,6 +10,7 @@ import { LoadScriptsService } from 'src/app/shared/services/load-scripts.service
 export class ListComponent implements OnInit {
 
   public entryList: any;
+  public search :string = '';
 
   constructor(private entreeService: EntreeService, private name: LoadScriptsService) {
     // this.retrieveEntry = [];
@@ -21,15 +22,12 @@ export class ListComponent implements OnInit {
   }
 
   private retrieveEntry(): void {
-    this.entreeService.retrieveEntry().subscribe(
+    this.entreeService.retrieveEntryJson().forEach(
       (data) => {
         this.entryList = data;
       },
       (error: Error) => {
         console.log('Error: ', error);
-      },
-      () => {
-        console.log('Petición realizada correctamente');
       }
     );
   }

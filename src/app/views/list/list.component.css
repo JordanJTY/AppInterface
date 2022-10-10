@@ -8,6 +8,24 @@
     padding-bottom: 6em;
 }
 
+#searchbar input{
+    margin: 1em;
+    margin-left: 5%;
+    display: flex;
+    width: 80%;
+    border: 2px solid black;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    background-color: #D7BEA8;
+}
+
+#searchbar{
+    padding: 2% 0;
+    justify-content: space-around;
+}
+
+
 #list {
     height: 750px;
 }

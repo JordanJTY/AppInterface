@@ -22,7 +22,7 @@ export class ListComponent implements OnInit {
   }
 
   private retrieveEntry(): void {
-    this.entreeService.retrieveEntryJson().forEach(
+    this.entreeService.retrieveEntry().subscribe(
       (data) => {
         this.entryList = data;
       },

@@ -1,6 +1,6 @@
 <div id="list">
-    <div>
-        <input type="text" [(ngModel)]="search" placeholder="Buscar">
+    <div id="searchbar">
+        <input type="search" type="text" [(ngModel)]="search" placeholder="Buscar">
     </div>
     <div class="slideshow-container">
         <div class="mySlides fade">
@@ -32,7 +32,8 @@
     </div>
 
     <div id="entree">
-        <app-entree *ngFor="let entree of entryList | filter: search" [entree]="entree" (click)="showTitle(entree.title)">
+        <app-entree *ngFor="let entree of entryList | filter: search" [entree]="entree"
+            (click)="showTitle(entree.title)">
         </app-entree>
     </div>
 </div>

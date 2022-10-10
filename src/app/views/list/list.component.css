@@ -1,10 +1,11 @@
 #entree {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
-    margin: 3em; 
+    margin: 3em;
+    padding-bottom: 6em;
 }
 
 #list {

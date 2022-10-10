@@ -5,14 +5,25 @@
     background-color: #00c8ffaa;
 }
 
+#container{
+    padding-bottom: 6em;
+}
+
 #contenedor p {
     padding-top: 1em;
     padding-bottom: 1em;
     margin: 1em;
 }
 
+#buttons{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
 #buttons button {
-    margin: 2em;
+    margin-top: 1em;
+    margin-left: 8%;
     display: flex;
     width: auto;
     border: none;
@@ -30,7 +41,9 @@
 }
 
 #versionApp{
-    margin-left: 80%;
-    margin-top: 35%;
-    bottom: 0;
+    margin-top: 2em;
+}
+
+#buttons p {
+    text-align: center;
 }

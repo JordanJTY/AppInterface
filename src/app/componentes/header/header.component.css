@@ -26,6 +26,9 @@
     overflow: hidden;
     background-color: #D7BEA8;
     padding: 10px 10px;
+    position: sticky;
+    z-index: 1;
+    top: 0;
 }
 
 /* Float the link section to the right */

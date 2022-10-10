@@ -2,9 +2,23 @@
 .header {
   overflow: hidden;
   background-color: #D7BEA8;
-  position: fixed; /* Set the navbar to fixed position */
-  bottom: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
+  position: fixed;/* Set the navbar to fixed position */
+  bottom: 0;/* Position the navbar at the top of the page */
+  width: 100%;/* Full width */
+}
+
+.buttonNav{
+  padding: 0.5em 0 !important;
+}
+
+.buttonNav img{
+  width: 2.5em;
+  height: 2.5em;
+}
+
+.listButton{
+  display: flex;
+  justify-content: space-around;
 }
 
 /* Style the header links */

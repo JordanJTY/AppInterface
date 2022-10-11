@@ -15,6 +15,7 @@ export class EntreeComponent implements OnInit {
     this.entree = {
       name: '',
       description: '',
+      price: '',
       image: ''
     }
   }

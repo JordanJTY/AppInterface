@@ -23,12 +23,10 @@ export class HeaderComponent implements OnInit {
     if (localStorage.getItem('userName')) {
       this.userName = localStorage.getItem('userName');
     }
-    
   }
-  // fin de pregunta estas seguro?
 
-  public showLogout(): void{
-    if(document.getElementById('logout')?.getAttribute('style') == 'display: none;'){
+  public showLogout(): void {
+    if (document.getElementById('logout')?.getAttribute('style') == 'display: none;') {
       document.getElementById('logout')?.setAttribute('style', 'display: inline;');
     } else {
       document.getElementById('logout')?.setAttribute('style', 'display: none;');

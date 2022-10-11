@@ -1,5 +1,10 @@
 .example-card {
-  max-width: 100px;
-  max-height: 100px;
-  margin-bottom: 1em
+  max-width: 125px;
+  max-height: 150px;
+  margin-bottom: 1em;
+  background-color: #D7BEA8;
+}
+
+.container {
+  font-size: small;
 }

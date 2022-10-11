@@ -16,7 +16,7 @@ export class ListComponent implements OnInit {
   constructor(private entreeService: EntreeService, private name: LoadScriptsService) {
     this.entryList = [
       {
-        name: 'xd',
+        name: 'Monitor 144hz',
         description: 'xd',
         image: 'https://www.reasonwhy.es/media/cache/destacada/colores-vender-mas.jpg'
       },

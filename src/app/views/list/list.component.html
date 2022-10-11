@@ -2,7 +2,7 @@
     <div id="searchbar">
         <input type="search" type="text" [(ngModel)]="search" placeholder="Buscar">
     </div>
-    <div class="slideshow-container">
+    <div *ngIf="search == ''" class="slideshow-container">
         <div class="mySlides fade">
             <div class="numbertext">1 / 3</div>
             <img src="../../../assets/images/img1.jpg" style="width:100%">
@@ -25,7 +25,7 @@
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
     <br>
-    <div style="text-align:center">
+    <div *ngIf="search == ''" style="text-align:center">
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
